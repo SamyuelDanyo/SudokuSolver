@@ -3,33 +3,33 @@
 //    Decimal implemented.
 //
 
-
-#include <cstdlib>														//  Includes
+//  Includes
+#include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <array>
 #include <vector>
+// Namespace
+using namespace std;
 
-using namespace std;													// Namespace
-
-
-#define DEC_DIMENSIONS 81												// Definitions
+// Definitions
+#define DEC_DIMENSIONS 81
 #define HEX_DIMENSIONS 256
 #define DEC 1
 #define HEX 2
 
 
-
-void printBoard(vector<vector<int>>& vec);								// Function prototypes
+// Function prototypes
+void printBoard(vector<vector<int>>& vec);
 string fileHandler(string filename);
 int lengthCheck(string str);
 vector<vector<int>> fillBoard(string str);
 int isFull(vector<vector<int>>& vec);
 array<int, 9> possibleEntries(vector<vector<int>> vec,int i, int j);
 int solve(vector<vector<int>> board);
-
-int puzzleType;  //1-->DEC 2-->											// Global Variables
+// Global Variables
+int puzzleType;  //1-->DEC 2-->
 int difficulty = 0;
 
 int main(int argc, const char * argv[]) {
